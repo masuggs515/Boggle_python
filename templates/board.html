@@ -1,0 +1,38 @@
+{% block title %} <title>BOGGLE</title> {% endblock %}
+
+{% extends 'base.html' %}
+{% block content %}
+<div class="container d-flex flex-column text-center justify-content-center">
+<h1 class="mt-2">Boggle game</h1>
+<button id="new-game-btn" class="btn btn-success btn-sm my-3">NEW GAME</button>
+
+<form method="POST" id="guess-form" class="my-3">
+    <input type="text" id="guess-text" name="word" placeholder="Guess Here" autocomplete="off" autofocus>
+    <button class="btn-primary btn btn-sm mx-3">Make Guess!</button>
+</form>
+
+<h5 id="score-p">Score: <span id="score">0</span></h5>
+<h5 id="time-p">Time Remaining: <span id="time">60</span> seconds</h5>
+<h5 id="word-msg">
+
+</h5>
+
+
+<div class="container d-flex justify-content-center">
+
+    <table id="boggle-board">
+        {% for row in board %}
+        <tr>
+            {% for ltr in row %}
+            <td class="p-4">{{ltr}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<h5 class="my-2">
+    Games played: {{played}}.
+    High-score: {{highscore}}
+</h5>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+    color: white;
+}
+
+#boggle-board{
+    margin-top: 4vh;
+    background-color: black;
+    color: white;
+    
+}
+#boggle-board td{
+    border: white 2px solid;
+}
+
+#new-game-btn{
+    width: 30vw;
+    align-self: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
